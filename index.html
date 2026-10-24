@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cakes hi Cakes | Home Bakery Cakes in Ranchi</title>
+<meta name="description" content="Cakes hi Cakes is a home bakery in Ranchi. Order birthday, anniversary and celebration cakes or design a custom cake, then send your order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff6ea;--ivory:#fffdf9;--blush:#f7d6da;--rose:#cf7a8b;--choc:#4a2c24;--gold:#b88a2e;--line:#ead9c3;--sh:0 8px 26px rgba(74,44,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 Nunito,system-ui,sans-serif;color:var(--choc);background:var(--cream)}
+h1,h2,h3,.logo{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);text-align:center}
+a{color:inherit}[hidden]{display:none!important}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+section{padding:54px 0}
+.alt{background:var(--ivory)}
+.sub{text-align:center;max-width:620px;margin:-.2em auto 28px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;max-width:1100px;margin:auto}
+.logo{font-size:1.55rem;font-weight:700;text-decoration:none;margin:0}.logo span{color:var(--gold);font-style:italic}
+nav{display:flex;gap:18px;align-items:center}nav a{text-decoration:none;font-weight:600}
+#menu{display:none}
+@media(max-width:780px){#menu{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--ivory);padding:14px 18px;border-bottom:1px solid var(--line)}nav.open{display:flex}}
+.btn{display:inline-block;border:2px solid var(--choc);border-radius:999px;padding:10px 22px;font:700 1rem Nunito,sans-serif;cursor:pointer;text-decoration:none;background:var(--choc);color:#fff;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn.pink{background:var(--rose);border-color:var(--rose)}.btn.line{background:transparent;color:var(--choc)}
+.btn.wa{background:#1b7f45;border-color:#1b7f45}.btn.sm{padding:7px 14px;font-size:.9rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:radial-gradient(circle at 80% 20%,var(--blush),transparent 55%),var(--cream);padding:72px 0 64px;text-align:center;border-bottom:3px double var(--gold)}
+.hero h1{font-size:clamp(2.2rem,7vw,4rem);max-width:760px;margin:0 auto .4em}
+.hero p{max-width:560px;margin:0 auto 26px;font-size:1.1rem}
+.hero .btn{margin:5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:var(--ivory);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column}
+.img{background:var(--blush);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.img svg,.img img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:99px}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cb h3{margin:0;font-size:1.2rem}.cb p{margin:0;font-size:.95rem}
+label{font-weight:600;font-size:.92rem;display:block}
+select,input,textarea{width:100%;font:inherit;padding:9px 11px;border:1.5px solid #d9c3a8;border-radius:10px;background:#fff;color:var(--choc)}
+.pr{font:700 1.25rem 'Playfair Display',serif;color:var(--gold)}
+.ok{font-size:.85rem;color:#1b7f45;font-weight:700}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}
+.chip{border:2px solid var(--gold);background:#fff;color:var(--choc);padding:8px 20px;border-radius:99px;font:700 1rem Nunito,sans-serif;cursor:pointer}
+.chip.on{background:var(--blush)}
+.note{font-size:.88rem;background:#fff;border-left:4px solid var(--gold);padding:8px 12px;border-radius:6px;margin:14px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.box{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:20px}
+.box h3{font-size:1.15rem}
+.steps .box{border-top:4px solid var(--blush)}
+.studio{background:var(--blush);border-radius:22px;padding:34px 20px;text-align:center}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.f.chk label{display:flex;gap:8px;align-items:center}.f.chk input{width:auto}
+.err{display:block;color:#b3261e;font-size:.85rem;min-height:1px}
+pre{white-space:pre-wrap;word-break:break-word;font:.9rem/1.5 Nunito,sans-serif;background:var(--cream);border-radius:10px;padding:12px;max-height:42vh;overflow:auto;margin:0}
+.sum{position:sticky;top:76px;background:var(--ivory);border:2px solid var(--gold);border-radius:16px;padding:18px}
+.line{display:grid;grid-template-columns:2fr 1.4fr 90px 1fr auto;gap:12px;align-items:center;background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+@media(max-width:760px){.line{grid-template-columns:1fr 1fr}}
+.lt{font-weight:700}
+.tot{font:700 1.4rem 'Playfair Display',serif;text-align:right;margin:14px 0}
+.empty{text-align:center;padding:30px}
+dialog{border:0;border-radius:18px;padding:22px;width:min(560px,92vw);background:var(--ivory);color:var(--choc);box-shadow:var(--sh)}
+dialog::backdrop{background:rgba(74,44,36,.55)}
+footer{background:var(--choc);color:#f6e8d6;padding:36px 0 90px}
+footer a{color:#f6e8d6}footer h3{color:#e9c875}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;background:#1b7f45;color:#fff;border-radius:99px;padding:13px 20px;font-weight:700;text-decoration:none;box-shadow:var(--sh)}
+.pop{animation:rise .5s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="bar">
+  <a class="logo" href="#top" aria-label="Cakes hi Cakes home">Cakes <span>hi</span> Cakes</a>
+  <button class="btn line sm" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#cakes">Cakes</a><a href="#custom">Customize Your Cake</a><a href="#how">How to Order</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="btn sm" href="#cart">Cart (<span id="cc">0</span>)</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<!-- ============ HOME ============ -->
+<div data-view="home" id="top">
+  <div class="hero"><div class="wrap pop">
+    <h1>Every Celebration Deserves a Cake.</h1>
+    <p>Birthdays, anniversaries and special celebrations: homemade cakes from Cakes hi Cakes, ordered easily on WhatsApp.</p>
+    <a class="btn" href="#cakes">Explore Our Cakes</a>
+    <a class="btn pink" href="#custom">Customize Your Cake</a>
+  </div></div>
+
+  <section id="popularS" class="alt"><div class="wrap"><h2>Popular Cakes</h2><div class="grid" id="popular"></div></div></section>
+  <section id="bestS"><div class="wrap"><h2>Bestsellers</h2><div class="grid" id="best"></div></div></section>
+
+  <section id="cakes" class="alt"><div class="wrap">
+    <h2>Our Cakes</h2>
+    <p class="sub">Browse by category, pick a weight, and add your cake to the cart.</p>
+    <div class="chips" id="chips" role="group" aria-label="Cake categories"></div>
+    <div class="grid" id="all"></div>
+    <p class="note">Pound weights are approximate: 1 pound is about 454 grams and 2 pounds is about 907 grams. Serving counts are not guaranteed. Prices are introductory and may change.</p>
+  </div></section>
+
+  <section><div class="wrap"><h2>Why Choose Cakes hi Cakes</h2><div class="cols">
+    <div class="box"><h3>Made at home</h3><p>A small home bakery that puts care into every order.</p></div>
+    <div class="box"><h3>Clear prices in ₹</h3><p>Every cake shows its price for each weight before you order.</p></div>
+    <div class="box"><h3>Your own design</h3><p>Tell us your idea and we will confirm what we can make for you.</p></div>
+    <div class="box"><h3>Simple ordering</h3><p>Choose, review, and send your order in one WhatsApp message.</p></div>
+  </div></div></section>
+
+  <section id="how" class="alt"><div class="wrap"><h2>How to Order</h2><div class="cols steps">
+    <div class="box"><h3>1. Choose</h3><p>Pick a cake, weight and quantity, or design your own.</p></div>
+    <div class="box"><h3>2. Review</h3><p>Check your cart and fill in the date and delivery details.</p></div>
+    <div class="box"><h3>3. Send on WhatsApp</h3><p>Open WhatsApp with your order ready, then tap Send.</p></div>
+    <div class="box"><h3>4. Get confirmation</h3><p>We check availability and confirm everything with you.</p></div>
+  </div></div></section>
+
+  <section id="designs"><div class="wrap"><div class="studio">
+    <h2>Custom Cake Design</h2>
+    <p class="sub" style="margin-bottom:18px">Choose the flavour, shape, colours and decoration, or share your own idea. We confirm the design, price and date with you. Not every design may be possible.</p>
+    <a class="btn" href="#custom">Customize Your Cake</a>
+  </div></div></section>
+
+  <section class="alt"><div class="wrap"><h2>Customer Testimonials</h2>
+    <p class="sub">Real reviews from our customers will appear here.</p>
+    <div class="cols" id="testi"></div></div></section>
+
+  <section id="faq"><div class="wrap" style="max-width:760px"><h2>Frequently Asked Questions</h2><div id="faqs"></div></div></section>
+
+  <section id="contact" class="alt"><div class="wrap two">
+    <div><h2 style="text-align:left">Contact Us</h2><div id="cinfo"></div>
+      <p><a class="btn wa" href="#" id="cwa" target="_blank" rel="noopener">Chat on WhatsApp</a></p></div>
+    <div class="box"><h3>Ask a question</h3><div class="form" id="gform" style="grid-template-columns:1fr"></div>
+      <p><button class="btn" id="gsend" type="button">Ask on WhatsApp</button></p></div>
+  </div></section>
+</div>
+
+<!-- ============ CUSTOM STUDIO ============ -->
+<div data-view="custom"><section><div class="wrap">
+  <h2>Customize Your Cake</h2>
+  <p class="sub">Choose what you like. Choose "Other" or tick "My Own Idea" for something different. Every design, price, ingredient and date needs confirmation from Cakes hi Cakes.</p>
+  <div class="two">
+    <form id="cform" class="form" novalidate onsubmit="return false"></form>
+    <aside class="sum" aria-live="polite"><h3>Your cake so far</h3><pre id="csum"></pre>
+      <p class="note"><b>Price to be confirmed by Cakes hi Cakes.</b></p>
+      <div class="acts"><button class="btn line" id="crev" type="button">Review My Cake</button><button class="btn wa" id="csend" type="button">Send Custom Request on WhatsApp</button></div></aside>
+  </div>
+</div></section></div>
+
+<!-- ============ CART ============ -->
+<div data-view="cart"><section><div class="wrap" style="max-width:860px">
+  <h2>Your Cart</h2>
+  <div id="cartList"></div>
+  <div id="checkout" hidden>
+    <div class="tot">Subtotal: <span id="sub"></span></div>
+    <p class="note">Delivery charges, if any, are not included and will be confirmed by Cakes hi Cakes. Pound weights are approximate (1 pound is about 454 g, 2 pounds about 907 g). This is not a payment: your order is not confirmed until the bakery replies.</p>
+    <h3>Your details</h3><div class="form" id="oform"></div>
+    <p><button class="btn wa" id="osend" type="button">Review and Send Order on WhatsApp</button> <a class="btn line" href="#cakes">Continue browsing</a></p>
+  </div>
+</div></section></div>
+</main>
+
+<footer><div class="wrap"><div class="cols">
+  <div><h3>Cakes hi Cakes</h3><p>Home bakery cakes for every celebration.</p></div>
+  <div><h3>Explore</h3><p><a href="#cakes">Cakes</a><br><a href="#custom">Customize Your Cake</a><br><a href="#cart">Cart</a><br><a href="#faq">FAQ</a></p></div>
+  <div><h3>Contact</h3><div id="finfo"></div></div>
+</div><p style="margin-top:24px;font-size:.85rem">&copy; <span id="yr"></span> Cakes hi Cakes. Prices are introductory and may change. Orders are confirmed only by the bakery.</p></div></footer>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Chat with Cakes hi Cakes on WhatsApp">WhatsApp</a>
+
+<dialog id="dlg"><h3 id="dt">Review your message</h3>
+  <p class="note">Check the message below. Opening WhatsApp only prepares it: <b>you must tap Send in WhatsApp</b>. Nothing is confirmed, paid or booked until Cakes hi Cakes replies and confirms.</p>
+  <pre id="dmsg"></pre>
+  <div class="acts" style="margin-top:14px"><a class="btn wa" id="dgo" target="_blank" rel="noopener">Open WhatsApp</a><button class="btn line" id="dcopy" type="button">Copy message</button><a class="btn line" id="dtel">Call instead</a><button class="btn" id="dx" type="button">Close</button></div>
+  <p class="note">If WhatsApp does not open, copy the message and send it to <span id="dnum"></span>.</p></dialog>
+<dialog id="info"><div id="ib"></div><p><button class="btn" id="ix" type="button">Close</button></p></dialog>
+
+<script src="config.js"></script>
+<script>
+const C=CONFIG,B=C.business,$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rs=n=>"₹"+Number(n).toLocaleString("en-IN");
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const WL={1:"1 pound",2:"2 pounds"},WNOTE="Pound weights are approximate: 1 pound is about 454 grams and 2 pounds is about 907 grams.";
+const live=()=>C.products.filter(p=>p.available);
+const prod=id=>live().find(p=>p.id===id);
+const wopts=p=>Object.keys(p.prices||{}).filter(w=>p.prices[w]>0);
+const L=(l,v)=>v?l+": "+v:null;
+const fd=v=>v?new Date(v+"T00:00").toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}):"";
+const isoDay=d=>new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const minDate=()=>{const d=new Date();d.setDate(d.getDate()+(Number(B.noticeDays)||0));return isoDay(d)};
+const art=c=>`<svg viewBox="0 0 120 100" role="img" aria-label="Cake illustration (add your own photo in config.js)"><rect width="120" height="100" fill="#f7d6da"/><ellipse cx="60" cy="88" rx="46" ry="6" fill="#4a2c24" opacity=".15"/><rect x="22" y="48" width="76" height="38" rx="8" fill="${c}"/><path d="M22 56q10 12 19 0t19 0 19 0 19 0V50q0-12-38-12T22 50z" fill="#fffdf9"/><circle cx="60" cy="32" r="7" fill="#cf7a8b"/><rect x="59" y="18" width="2" height="8" fill="#b88a2e"/></svg>`;
+const pic=p=>p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.outerHTML=art('${esc(p.color)}')">`:art(p.color);
+
+/* ---------- forms ---------- */
+function mk(pf,defs){return defs.map(([k,l,t,r])=>{const id=pf+k;let inp;
+  if(Array.isArray(t))inp=`<select id="${id}"><option value="">Choose…</option>${t.map(o=>`<option>${esc(o)}</option>`).join("")}</select>`;
+  else if(t==="textarea")inp=`<textarea id="${id}" rows="3"></textarea>`;
+  else if(t==="check")return `<div class="f chk"><label><input type="checkbox" id="${id}"> ${l}</label></div>`;
+  else inp=`<input id="${id}" type="${t}"${t==="number"?' min="0" inputmode="numeric"':""}${t==="date"?` min="${minDate()}"`:""}${t==="tel"?' inputmode="tel" autocomplete="tel"':""}>`;
+  return `<div class="f" id="w_${id}"><label for="${id}">${l}${r?" *":""}</label>${inp}<small class="err" id="e_${id}" role="alert"></small></div>`}).join("")}
+const V=(pf,k)=>{const e=$("#"+pf+k);return e?(e.type==="checkbox"?(e.checked?"Yes":""):e.value.trim()):""};
+function valid(pf,defs){let ok=true,first;defs.forEach(([k,l,t,r])=>{const e=$("#e_"+pf+k);if(!e)return;const v=V(pf,k);let m="";
+  if(r&&!v&&!(k==="address"&&V(pf,"mode")!=="Delivery"))m="Please fill this in.";
+  else if(k==="phone"&&v&&!/^(\+?91)?[6-9]\d{9}$/.test(v.replace(/[\s-]/g,"")))m="Enter a valid 10-digit mobile number.";
+  else if(k==="date"&&v&&v<minDate())m="Please choose "+(B.noticeDays?"a date at least "+B.noticeDays+" day(s) from today.":"today or a later date.");
+  e.textContent=m;if(m){ok=false;first=first||$("#"+pf+k)}});if(first)first.focus();return ok}
+
+/* ---------- cart ---------- */
+let cart=[];try{cart=JSON.parse(localStorage.getItem("chc_cart")||"[]")}catch(e){}
+cart=cart.filter(i=>prod(i.id));
+const price=i=>{const p=prod(i.id);return p&&p.prices&&p.prices[i.w]?p.prices[i.w]:0};
+const save=()=>{try{localStorage.setItem("chc_cart",JSON.stringify(cart))}catch(e){}$("#cc").textContent=cart.reduce((a,i)=>a+i.q,0)};
+const clampQ=q=>Math.min(20,Math.max(1,Math.floor(Number(q))||1));
+function add(id,w,q){const x=cart.find(i=>i.id===id&&i.w===w);x?x.q=clampQ(x.q+q):cart.push({id,w,q:clampQ(q)});save()}
+function renderCart(){const el=$("#cartList");
+  if(!cart.length){el.innerHTML=`<div class="empty"><p>Your cart is empty.</p><a class="btn" href="#cakes">Browse our cakes</a></div>`;$("#checkout").hidden=true;return}
+  $("#checkout").hidden=false;let sub=0,tbc=0;
+  el.innerHTML=cart.map((i,x)=>{const p=prod(i.id),pr=price(i);pr?sub+=pr*i.q:tbc++;
+    return `<div class="line"><b>${esc(p.name)}</b>
+    <label>Weight<select data-x="${x}" data-act="cw">${wopts(p).map(w=>`<option value="${w}"${w===i.w?" selected":""}>${WL[w]||w+" lb"} - ${rs(p.prices[w])}</option>`).join("")||"<option>Price to be confirmed</option>"}</select></label>
+    <label>Qty<input type="number" min="1" max="20" value="${i.q}" data-x="${x}" data-act="cq"></label>
+    <span class="lt">${pr?rs(pr*i.q):"Price to be confirmed"}</span>
+    <button class="btn line sm" type="button" data-x="${x}" data-act="rm" aria-label="Remove ${esc(p.name)}">Remove</button></div>`}).join("");
+  $("#sub").textContent=rs(sub)+(tbc?" + items with price to be confirmed":"")}
+const OF=[["name","Your name","text",1],["phone","Contact number","tel",1],["occasion","Occasion","text"],["date","Required date","date",1],["time","Preferred time","time"],["mode","Pickup or delivery",["Pickup","Delivery"],1],["address","Delivery address","textarea",1],["msg","Name or message to write on the cake","text"],["notes","Additional instructions","textarea"]];
+function omsg(){let sub=0,tbc=false;
+  const items=cart.map((i,n)=>{const p=prod(i.id),pr=price(i);pr?sub+=pr*i.q:tbc=true;return `${n+1}. ${p.name} - ${WL[i.w]||"size to be confirmed"} x ${i.q}${pr?" = "+rs(pr*i.q):" (price to be confirmed)"}`});
+  const g=k=>V("o_",k);
+  return ["*New Cake Order - "+B.name+"*",L("Name",g("name")),L("Phone",g("phone")),"","*Items*",...items,"Subtotal: "+rs(sub)+(tbc?" + items with price to be confirmed":""),"","*Details*",L("Occasion",g("occasion")),L("Required date",fd(g("date"))),L("Preferred time",g("time")),L("Pickup/Delivery",g("mode")),g("mode")==="Delivery"?L("Delivery address",g("address")):null,L("Message on cake",g("msg")),L("Instructions",g("notes")),"","This is an order request only. Delivery charges (if any) and availability are to be confirmed by "+B.name+"."].filter(x=>x!==null).join("\n")}
+
+/* ---------- WhatsApp dialog ---------- */
+const waURL=t=>`https://wa.me/${B.whatsapp}?text=${encodeURIComponent(t)}`;
+function send(title,text){$("#dt").textContent=title;$("#dmsg").textContent=text;$("#dgo").href=waURL(text);$("#dtel").href="tel:+"+B.whatsapp;$("#dnum").textContent=B.phoneDisplay;$("#dcopy").textContent="Copy message";$("#dlg").showModal()}
+
+/* ---------- custom studio ---------- */
+const FL=["Vanilla","Chocolate","Pineapple","Black Forest","Butterscotch","White Forest","Choco Vanilla","Mix Fruit","Choco Crunch","Oreo","Chocolate Truffle","Red Velvet","Other"];
+const CF=[["name","Your name","text",1],["cat","Cake category",["Birthday","Anniversary","Wedding","Engagement","Baby Celebration","Other"],1],["flavor","Flavor",FL,1],["weight","Weight",["1 pound","2 pounds","Other"],1],["shape","Shape",["Round","Square","Heart","Other"],1],["tiers","Number of tiers or layers (subject to approval)",["1","2","3","Other"]],["frosting","Frosting preference","text"],["color","Main cake color","text"],["decor","Decoration style",["Simple","Floral","Elegant","Chocolate","Minimal","Other"]],["topper","Cake-topper preference","text"],["text","Personalized name or text","text"],["own","My Own Idea / Something Different","check"],["idea","Describe your own idea","textarea"],["notes","Additional design instructions","textarea"],["occasion","Occasion","text"],["date","Required date","date",1],["budget","Preferred budget (₹)","number"],["mode","Pickup or delivery",["Pickup","Delivery","Not sure yet"]],["special","Special instructions","textarea"]];
+function cmsg(){const g=k=>V("c_",k),f=$("#c_file")&&$("#c_file").files[0];
+  return ["*Custom Cake Request - "+B.name+"*",L("Name",g("name")),L("Category",g("cat")),L("Flavor",g("flavor")),L("Weight",g("weight")),L("Shape",g("shape")),L("Tiers/layers",g("tiers")),L("Frosting",g("frosting")),L("Main color",g("color")),L("Decoration",g("decor")),L("Topper",g("topper")),L("Name/text on cake",g("text")),g("own")?L("My own idea",g("idea")||"Yes (I will explain in chat)"):null,L("Design instructions",g("notes")),L("Occasion",g("occasion")),L("Required date",fd(g("date"))),L("Budget",g("budget")?"₹"+g("budget"):""),L("Pickup/Delivery",g("mode")),L("Special instructions",g("special")),f?`Reference image: "${f.name}" (I will attach it in WhatsApp myself)`:null,"Price: To be confirmed by "+B.name,"","This is a custom request only. Design, price, ingredients and date need confirmation from "+B.name+"."].filter(x=>x!==null).join("\n")}
+function sum(){$("#w_c_idea").hidden=!$("#c_own").checked;$("#csum").textContent=cmsg().replace(/\*/g,"")}
+let prefill=null;
+
+/* ---------- home content ---------- */
+const card=(p,tag)=>{const w=wopts(p);return `<article class="card" data-id="${p.id}"><div class="img">${pic(p)}${tag?'<span class="tag">Sample pick</span>':""}</div><div class="cb"><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>
+  ${w.length?`<label>Weight<select class="w">${w.map(x=>`<option value="${x}">${WL[x]||x+" lb"} - ${rs(p.prices[x])}</option>`).join("")}</select></label>`:""}
+  <label>Quantity<input class="q" type="number" min="1" max="20" value="1"></label>
+  <div class="pr">${w.length?rs(p.prices[w[0]]):"Price to be confirmed"}</div><span class="ok">Available</span>
+  <div class="acts"><button class="btn sm line" type="button" data-act="view">View Details</button><button class="btn sm" type="button" data-act="add">Order This Cake</button><button class="btn sm pink" type="button" data-act="cust">Customize This Cake</button></div></div></article>`};
+function grid(sel,list,tag){$(sel).innerHTML=list.map(p=>card(p,tag)).join("")}
+function showCat(c){grid("#all",live().filter(p=>!c||p.category===c));$$(".chip").forEach(b=>b.classList.toggle("on",(b.dataset.cat||"")===(c||"")))}
+function updPrice(c){const p=prod(c.dataset.id),w=c.querySelector(".w"),q=clampQ(c.querySelector(".q").value),pr=w?p.prices[w.value]:0;c.querySelector(".pr").textContent=pr?rs(pr)+(q>1?` x ${q} = ${rs(pr*q)}`:""):"Price to be confirmed"}
+function info(p){const w=wopts(p);$("#ib").innerHTML=`<div class="img" style="border-radius:12px;overflow:hidden;margin-bottom:12px">${pic(p)}</div><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><p>${w.length?w.map(x=>`<b>${WL[x]||x+" lb"}:</b> ${rs(p.prices[x])}`).join("<br>"):"<b>Price to be confirmed</b>"}</p><p class="note">${WNOTE} Serving counts are not guaranteed. ${esc(B.confirmation)}</p>`;$("#info").showModal()}
+
+/* ---------- routing ---------- */
+function route(){const h=location.hash.slice(1),v=h==="custom"||h==="cart"?h:"home";
+  $$("[data-view]").forEach(s=>s.hidden=s.dataset.view!==v);
+  document.title=v==="custom"?"Customize Your Cake | Cakes hi Cakes":v==="cart"?"Your Cart | Cakes hi Cakes":"Cakes hi Cakes | Home Bakery Cakes in Ranchi";
+  if(v==="cart")renderCart();
+  if(v==="custom"&&prefill){$("#c_flavor").value=FL.includes(prefill)?prefill:"Other";prefill=null;sum()}
+  const t=v==="home"&&h&&document.getElementById(h);t?t.scrollIntoView():scrollTo(0,0);
+  $("#nav").classList.remove("open");$("#menu").setAttribute("aria-expanded","false")}
+
+/* ---------- init ---------- */
+(function(){
+  const sm=!!C.bestsellersAreSample;
+  grid("#popular",live().filter(p=>p.popular),sm);grid("#best",live().filter(p=>p.best),sm);
+  $("#popularS").hidden=!$("#popular").children.length;$("#bestS").hidden=!$("#best").children.length;
+  const cats=[...new Set(live().map(p=>p.category).filter(Boolean))];
+  $("#chips").innerHTML=`<button class="chip on" type="button" data-cat="">All</button>`+cats.map(c=>`<button class="chip" type="button" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  showCat("");
+  $("#testi").innerHTML=[1,2,3].map(()=>`<div class="box"><p><i>Sample placeholder: a real customer review will go here.</i></p><p><b>Customer name</b></p></div>`).join("");
+  const q=[["How do I order?","Choose a cake and add it to your cart, or design your own. Review the summary, then open WhatsApp and tap Send. We reply to confirm availability and details."],["Is my order confirmed when I send the WhatsApp message?","No. Your order is confirmed only after Cakes hi Cakes replies and agrees the details with you."],["How big is a pound?","Weights are approximate: 1 pound is about 454 grams and 2 pounds is about 907 grams. We cannot promise exact serving counts."],["Can you make any design I want?","We will try. Every custom design, price, ingredient and date must be confirmed by the bakery first."],["How is delivery handled?",B.serviceArea||B.deliveryCharges?[B.serviceArea&&"Delivery area: "+B.serviceArea,B.deliveryCharges&&"Delivery charges: "+B.deliveryCharges].filter(Boolean).join(". "):"Choose pickup or delivery when you order. We confirm the details with you on WhatsApp."]];
+  if(B.noticeDays)q.push(["How much notice do you need?","Please order at least "+B.noticeDays+" day(s) ahead."]);
+  if(B.payments)q.push(["How can I pay?",B.payments]);
+  if(B.cancellation)q.push(["What is the cancellation policy?",B.cancellation]);
+  $("#faqs").innerHTML=q.map(([a,b])=>`<details><summary>${esc(a)}</summary><p>${esc(b)}</p></details>`).join("");
+  const ci=[["WhatsApp / phone",B.phoneDisplay],["Location",B.location],["Address",B.address],["Pickup",B.pickup],["Business hours",B.hours],["Delivery area",B.serviceArea],["Delivery charges",B.deliveryCharges]].filter(x=>x[1]).map(x=>`<p><b>${x[0]}:</b> ${esc(x[1])}</p>`).join("")+(B.instagram?`<p><a href="${esc(B.instagram)}" target="_blank" rel="noopener">Instagram</a></p>`:"");
+  $("#cinfo").innerHTML=ci;$("#finfo").innerHTML=ci;
+  const hi=waURL("Hello "+B.name+", I have a question.");$("#cwa").href=hi;$("#fab").href=hi;
+  const GF=[["name","Your name","text"],["q","Your question","textarea",1]];
+  $("#gform").innerHTML=mk("g_",GF);
+  $("#cform").innerHTML=mk("c_",CF)+`<div class="f"><label for="c_file">Reference image (optional)</label><input id="c_file" type="file" accept="image/*"><small>Your image stays on your device. WhatsApp may not receive it automatically: please attach it in the chat yourself.</small></div>`;
+  $("#oform").innerHTML=mk("o_",OF);
+  $("#yr").textContent=new Date().getFullYear();
+  save();sum();route();
+  $("#w_o_address").hidden=true;
+
+  document.addEventListener("click",e=>{
+    const ch=e.target.closest(".chip");if(ch){showCat(ch.dataset.cat);return}
+    const b=e.target.closest("[data-act]");if(!b)return;const a=b.dataset.act,c=b.closest(".card"),p=c&&prod(c.dataset.id);
+    if(a==="view")info(p);
+    else if(a==="add"){const w=c.querySelector(".w");add(p.id,w?w.value:"0",clampQ(c.querySelector(".q").value));location.hash="cart";if(location.hash==="#cart")route()}
+    else if(a==="cust"){prefill=p.flavor;location.hash="custom";route()}
+    else if(a==="rm"){cart.splice(+b.dataset.x,1);save();renderCart()}});
+  document.addEventListener("change",e=>{const t=e.target,c=t.closest(".card");
+    if(c&&(t.matches(".w")||t.matches(".q")))updPrice(c);
+    if(t.dataset.act==="cw"){const i=cart[+t.dataset.x],d=cart.find(o=>o!==i&&o.id===i.id&&o.w===t.value);if(d){d.q=clampQ(d.q+i.q);cart.splice(+t.dataset.x,1)}else i.w=t.value;save();renderCart()}
+    if(t.dataset.act==="cq"){cart[+t.dataset.x].q=clampQ(t.value);save();renderCart()}
+    if(t.id==="o_mode")$("#w_o_address").hidden=t.value!=="Delivery"});
+  $("#cform").addEventListener("input",sum);$("#cform").addEventListener("change",sum);
+  $("#crev").onclick=()=>{if(valid("c_",CF))$("#csum").scrollIntoView({behavior:"smooth",block:"center"})};
+  $("#csend").onclick=()=>{if(valid("c_",CF))send("Review your custom cake request",cmsg())};
+  $("#osend").onclick=()=>{if(!cart.length)return;if(valid("o_",OF))send("Review your order",omsg())};
+  $("#gsend").onclick=()=>{if(valid("g_",GF))send("Review your question",["*Question for "+B.name+"*",L("Name",V("g_","name")),V("g_","q")].filter(x=>x!==null).join("\n"))};
+  $("#dx").onclick=()=>$("#dlg").close();$("#ix").onclick=()=>$("#info").close();
+  $("#dcopy").onclick=async()=>{try{await navigator.clipboard.writeText($("#dmsg").textContent);$("#dcopy").textContent="Copied"}catch(x){alert("Please select the message text and copy it.")}};
+  $("#menu").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menu").setAttribute("aria-expanded",o)};
+  addEventListener("hashchange",route);
+})();
+</script>
+</body>
+</html>
